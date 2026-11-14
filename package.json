@@ -1,0 +1,8 @@
+{
+  "name": "blacksheep-korean-bbq",
+  "version": "1.0.0",
+  "description": "Blacksheep Korean BBQ & Hotpot — Cottonwood Mall Albuquerque all-you-can-eat site (static + node form relay)",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
