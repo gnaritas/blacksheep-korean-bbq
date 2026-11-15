@@ -20,7 +20,7 @@ def font(path_names, size):
 
 f_word = font(["Arial Bold.ttf", "Helvetica.ttc"], 118)
 f_sub  = font(["Arial Bold.ttf", "Helvetica.ttc"], 40)
-f_line = font(["Arial.ttf", "Helvetica.ttc"], 30)
+f_line = font(["Arial.ttf", "Helvetica.ttc"], 26)
 f_tag  = font(["Georgia Italic.ttf", "Georgia.ttf"], 34)
 
 img = Image.new("RGB", (W, H), "#141110")
@@ -48,14 +48,14 @@ CREAM = (246, 239, 228, 255); MIST = (205, 194, 180, 255); EMBER = (255, 90, 31,
 # ember dot + wordmark
 d.ellipse((72, 150, 108, 186), fill=EMBER)
 d.text((126, 96), "BLACKSHEEP", font=f_word, fill=CREAM)
-d.text((76, 246), "KOREAN BBQ  &  HOT POT", font=f_sub, fill=GOLD)
+d.text((76, 246), "KOREAN BBQ \u00b7 HOT POT", font=f_sub, fill=GOLD)
 
 # tagline (their published slogan words)
 d.text((76, 336), "\u201cSizzling grills. Bubbling broth.\nGood times around the table.\u201d", font=f_tag, fill=(246, 239, 228, 210))
 
 # bottom facts line
 d.line([(76, 520), (1124, 520)], fill=(246, 239, 228, 60), width=2)
-d.text((76, 542), "All-you-can-eat  ·  Cottonwood Mall, Suite G217  ·  Albuquerque, NM  ·  (505) 407-2915", font=f_line, fill=MIST)
+d.text((76, 546), "All-you-can-eat  ·  Cottonwood Mall  ·  Albuquerque, NM  ·  (505) 407-2915", font=f_line, fill=MIST)
 
 img.save(OUT, "PNG")
 print("wrote", OUT, os.path.getsize(OUT), "bytes")
